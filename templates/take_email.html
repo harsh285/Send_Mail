@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Send Mail Demo</title>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+              integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+              crossorigin="anonymous">
+    </head>
+</head>
+<body>
+<center>
+    <h1 class='alert alert-success'>Enter Recepient Email</h1>
+    <form method="POST">
+        <!-- Very Important csrf Token -->
+        {% csrf_token %}
+        <div class="form-group">
+            <p>
+            <h3>{{ form.as_p }}</h3>
+            </p>
+            <br>
+        </div>
+        <input type="submit" name="Information" class='btn btn-primary btn-lg'>
+    </form>
+</center>
+</body>
+
+</html>
